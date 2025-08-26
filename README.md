@@ -155,6 +155,9 @@ Welcome to User Service!
   * User: `springuser`
   * Password: `root123`
 
+* **Pre-populated Data:**
+  The database is automatically seeded from `src/main/resources/data.sql` at startup.  
+  This file inserts sample users so the API returns data immediately.
 
 # Connecting to MySQL
 
