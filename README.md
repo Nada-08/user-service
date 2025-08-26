@@ -90,6 +90,50 @@ This will:
 * Link them together
 * Expose the app on `http://localhost:8080`
 
+### Step 4: Access the application
+
+* API: [http://localhost:8080/users](http://localhost:8080/users)
+* Home: [http://localhost:8080/](http://localhost:8080/)
+
+---
+
+## API Usage
+
+### Get all users
+
+```http
+GET http://localhost:8080/users
+```
+
+**Sample Response:**
+
+```json
+[
+  {
+    "id": 1,
+    "name": "Nada",
+    "email": "nada@example.com"
+  },
+  {
+    "id": 2,
+    "name": "Ali",
+    "email": "ali@example.com"
+  }
+]
+```
+
+### Home endpoint
+
+```http
+GET http://localhost:8080/
+```
+
+**Response:**
+
+```text
+Welcome to User Service!
+```
+
 ---
 
 ## Services
@@ -140,23 +184,6 @@ docker compose up --build
 docker compose logs -f
 ```
 
----
-
-## Troubleshooting
-
-**Issue:** `target/user-service-1.0-SNAPSHOT.jar not found`
-**Solution:** Run the Maven build step before `docker compose up`.
-
-**Issue:** `docker: command not found`
-**Solution:** Install Docker and ensure it is running.
-
-**Issue:** Database connection error
-**Solution:** Wait a few seconds, the app will start once MySQL is healthy.
-
-**Issue:** Port already in use
-**Solution:** Stop the process using the port, or change ports in `docker-compose.yml`.
-
----
 
 ## Project Structure
 
